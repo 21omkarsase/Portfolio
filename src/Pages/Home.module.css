@@ -1,0 +1,87 @@
+.home-area {
+    /* background: url("https://images.unsplash.com/photo-1510936111840-65e151ad71bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60") center center/cover no-repeat rgba(0, 0, 0, 0.297);
+    background-blend-mode: darken; */
+    background-color: #343F4F;
+    height: 100vh;
+}
+
+.main-area {
+
+    display: flex;
+    height: 80vh;
+    width: 70vw;
+    margin: 0 auto;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wrapper {
+    display: inline-flex;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.static-txt {
+    color: white;
+    font-size: 60px;
+    font-weight: 400px;
+    /* font-size: ; */
+}
+
+.dynamic-txt {
+    height: 75px;
+    line-height: 75px;
+    overflow: hidden;
+    /* margin-top: -7px; */
+    margin-left: 10px;
+}
+
+.dynamic-txt li span {
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.dynamic-txt li span {
+    color: #FC6D6D;
+    font-size: 60px;
+    font-weight: 500px;
+    position: relative;
+    top: 0;
+    animation: slide 4.5s steps(3) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -270px;
+    }
+}
+
+.dynamic-txt li span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    padding-bottom: 12px;
+    width: 100%;
+    left: 0;
+    background: #343F4F;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 1.5s steps(10) infinite;
+}
+
+
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -15px 0 15px;
+
+    }
+}
