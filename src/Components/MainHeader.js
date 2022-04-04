@@ -2,17 +2,22 @@ import React, { useState } from "react";
 import classes from "./MainHeader.module.css";
 
 const MainHeader = () => {
-  //   const [isScrolling, setScrolling] = useState(false);
-  //   const scrollHandler = (e) => {
-  //     if (e.scrollTop > 0) {
-  //       setScrolling(true);
-  //     }
-  //   };
+  const [isScrolled, setIsScrolled] = useState(false);
+  const scrollHandler = () => {
+    const scrollTop = window.scrollY;
+    console.log(isScrolled);
+    console.log(scrollTop);
+    if (scrollTop >= 800) {
+      setIsScrolled(true);
+    }
+    if (scrollTop < 800) {
+      setIsScrolled(false);
+    }
+  };
+  window.addEventListener("scroll", scrollHandler);
+
   return (
-    <nav
-    //   onScroll={scrollHandler}
-    //   className={isScrolling ? classes.fixed : classes.nScroll}
-    >
+    <nav className={isScrolled ? classes.scrolling : classes.notScrolling}>
       <div className={classes.navbar}>
         <div className={classes.logo}>OmkarSase</div>
         <div className={classes["navbar-nav"]}>
