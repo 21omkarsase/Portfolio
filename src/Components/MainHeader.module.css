@@ -3,11 +3,12 @@
     font-weight: bold;
 }
 nav{
-    background-color: white;
+    background-color: crimson;
+    color: white;
 }
 .navbar{
     display: flex;
-    height: 70px;
+    height: 60px;
     align-items: center;
     width: 70%;
     margin: 0 auto;
@@ -25,7 +26,6 @@ nav{
 
 .list{
     display: flex;
-    list-style: none;
 }
 
 .navbar-nav{
@@ -34,4 +34,10 @@ nav{
 }
 .list li{
     margin: 0 20px;
+}
+
+.list li a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
 }

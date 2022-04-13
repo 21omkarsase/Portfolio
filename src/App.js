@@ -1,5 +1,6 @@
 import MainHeader from "./Components/MainHeader";
-import { Routes, Route } from "react-router-dom";
+import Footer from "./Components/Footer";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Project from "./Pages/Project";
@@ -11,10 +12,12 @@ const App = () => {
       <MainHeader />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,43 @@
+.about {
+    height: 100vh;
+    padding: 0 120px;
+}
+
+.about h1 {
+    margin: 0;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.main-about {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.photo img {
+    max-width: 600px;
+    width: 500px;
+    min-width: 200px;
+    height: auto;
+}
+
+.main-about .info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 400px;
+    align-self: center;
+}
+
+.main-about .info button {
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    /* margin-top: 20px; */
+    font-weight: 400;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid crimson;
+}

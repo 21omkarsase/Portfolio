@@ -1,0 +1,56 @@
+.bars
+{
+    /* width: 38%; */
+}
+.info
+{
+    display: flex;
+    justify-content: space-between;
+}
+.bars .js {
+    height: 5px;
+    width: 100%;
+    background: rgb(198, 17, 17);
+    position: relative;
+}
+
+
+.bars .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.bars .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.bars .html::before {
+    width: 100%;
+}
+
+.bars .css::before {
+    width: 70%;
+}
+
+.bars .js::before {
+    width: 75%;
+}
+
+.bars .react::before {
+    width: 90%;
+}
+
+.bars .bootstrap::before {
+    width: 100%;
+}
+
+.bars .nodejs::before {
+    width: 5%;
+}

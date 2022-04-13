@@ -18,11 +18,15 @@ function Home() {
           />
         </div>
         <div className={classes["main-area"]}>
+          <div className={classes.textarea}>
+            <span>Hello, My Name is</span>
+            <span className={classes.name}>Omkar Sase</span>
+          </div>
           <div className={classes.wrapper}>
             <div className={classes["static-txt"]}>I'm </div>
             <ul className={classes["dynamic-txt"]}>
               <li>
-                <span> A Studentt</span>
+                <span className={classes.student}> A Studentt</span>
               </li>
               <li>
                 <span> A Learnerr</span>
@@ -30,10 +34,15 @@ function Home() {
               <li>
                 <span> A Developerr</span>
               </li>
-              <li>
+              {/* <li>
                 <span>Omkar Sasee</span>
-              </li>
+              </li> */}
             </ul>
+          </div>
+          <div className={classes.hireButton}>
+            <a target="_blank" href="https://www.linkedin.com/in/omkarsase/">
+              <button type="button">Hire Me</button>
+            </a>
           </div>
           <div className={classes["social-icons"]}>
             <FontAwesomeIcon className={classes.twitter} icon={faTwitter} />

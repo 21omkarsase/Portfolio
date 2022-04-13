@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import classes from "./MainHeader.module.css";
 
 const MainHeader = () => {
@@ -7,10 +8,10 @@ const MainHeader = () => {
     const scrollTop = window.scrollY;
     console.log(isScrolled);
     console.log(scrollTop);
-    if (scrollTop >= 800) {
+    if (scrollTop >= 5) {
       setIsScrolled(true);
     }
-    if (scrollTop < 800) {
+    if (scrollTop < 4) {
       setIsScrolled(false);
     }
   };
@@ -22,10 +23,18 @@ const MainHeader = () => {
         <div className={classes.logo}>OmkarSase</div>
         <div className={classes["navbar-nav"]}>
           <ul className={classes.list}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="/contact">contact</Link>
+            </li>
           </ul>
         </div>
       </div>
