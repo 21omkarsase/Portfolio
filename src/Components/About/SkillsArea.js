@@ -29,7 +29,7 @@ function SkillsArea() {
         </div>
       </div>
       <div className={classes.certificates}>
-        <h1>Licenses & certifications</h1>
+        <h4>Licenses & certifications</h4>
         <div className={classes.certificates}>
           <ul className={classes.certificateList}>
             <a

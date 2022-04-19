@@ -3,22 +3,21 @@ import { Link } from "react-router-dom";
 import classes from "./MainHeader.module.css";
 
 const MainHeader = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const scrollHandler = () => {
-    const scrollTop = window.scrollY;
-    console.log(isScrolled);
-    console.log(scrollTop);
-    if (scrollTop >= 5) {
-      setIsScrolled(true);
-    }
-    if (scrollTop < 4) {
-      setIsScrolled(false);
-    }
-  };
-  window.addEventListener("scroll", scrollHandler);
+  // const [isScrolled, setIsScrolled] = useState(false);
+  // const scrollHandler = () => {
+  //   const scrollTop = window.scrollY;
+  //   if (scrollTop >= 5) {
+  //     setIsScrolled(true);
+  //   }
+  //   if (scrollTop < 4) {
+  //     setIsScrolled(false);
+  //   }
+  // };
+  // window.addEventListener("scroll", scrollHandler);
 
   return (
-    <nav className={isScrolled ? classes.scrolling : classes.notScrolling}>
+    // className={isScrolled ? classes.scrolling : classes.notScrolling}
+    <nav>
       <div className={classes.navbar}>
         <div className={classes.logo}>OmkarSase</div>
         <div className={classes["navbar-nav"]}>

@@ -32,6 +32,11 @@
     min-width: 450px;
 }
 
+.certificates h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 .certificateList {
     width: 90%;
     margin: 0 auto;

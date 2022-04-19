@@ -1,0 +1,156 @@
+.contactArea {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.contact {
+    margin: 0;
+    padding-top: 70px;
+}
+
+h1,
+p {
+    margin: 0;
+    text-align: center;
+}
+
+.main-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0px 0px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 40%;
+    max-width: 400px;
+    min-width: 300px;
+    justify-content: space-between;
+    /* border: 1px solid crimson; */
+    border-radius: 15px;
+    padding: 0px 15px 120px;
+}
+
+.contactInfo h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.nameArea,
+.addressArea,
+.emailArea {
+    display: flex;
+}
+
+.name,
+.address,
+.email {
+    margin-left: 25px;
+    margin-top: -5px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 225px;
+    margin-top: 5px;
+    margin-left: 48px;
+}
+
+.linkedin,
+.facebook,
+.github,
+.twitter,
+.instagram {
+    font-size: 25px;
+    color: crimson;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 5px 30px;
+    font-size: 17px;
+}
+
+.firstRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.firstRow .nameDiv,
+.firstRow .emailDiv {
+    width: 43%;
+}
+
+textarea {
+    padding-top: 10px;
+    resize: none;
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 5px 30px;
+}
+
+.firstRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactForm {
+    display: flex;
+    width: 50%;
+    max-width: 700px;
+    min-width: 500px;
+    flex-direction: column;
+    /* height: 400px; */
+    /* justify-content: space-between; */
+}
+
+.firstRow,
+.secondRow,
+.thirdRow {
+    margin-bottom: 50px;
+}
+
+.btn button {
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 5px 20px;
+    /* margin-top: 20px; */
+    font-weight: 400;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid crimson;
+}
+
+.btn button:hover {
+    color: black;
+    background: white;
+    font-weight: 400;
+}
+
+.icon {
+    color: crimson;
+}
+
+.contactInfo a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.contactInfo a:hover {
+    text-decoration: underline;
+}

@@ -161,3 +161,8 @@ li {
     cursor: pointer;
     border: 2px solid crimson;
 }
+.hireButton button:hover{
+    color: crimson;
+    background: none;
+    font-weight: 600;
+}

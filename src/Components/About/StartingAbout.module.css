@@ -41,3 +41,10 @@
     cursor: pointer;
     border: 2px solid crimson;
 }
+
+
+.main-about .info button:hover{
+    color: crimson;
+    background: none;
+    font-weight: 600;
+}
