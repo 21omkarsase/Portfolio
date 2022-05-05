@@ -1,37 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import classes from "../Pages/Home.module.css";
+import Typed from "typed.js";
 
 function Home() {
+  const el = useRef(null);
+  const typed = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      strings: ["A Learner", "A Developer", "Omkar Sase"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    };
+    typed.current = new Typed(el.current, options);
+    return () => {
+      typed.current.destroy();
+    };
+  }, []);
   return (
     <div className={classes["home-area"]}>
       <div className={classes.content}>
-        <div className={classes.img}>
-          <img
-            src="https://21omkarsase.github.io/MyPortfolio/img/banner/banner-image.png"
-            alt=""
-          />
-        </div>
         <div className={classes["main-area"]}>
           <div className={classes.textarea}>
             <span>Hello, My Name is</span>
             <span className={classes.name}>Omkar Sase</span>
           </div>
-          <div className={classes.wrapper}>
-            <div className={classes["static-txt"]}>I'm </div>
-            <ul className={classes["dynamic-txt"]}>
-              <li>
-                <span className={classes.student}> A Studentt</span>
-              </li>
-              <li>
-                <span> A Learnerr</span>
-              </li>
-              <li>
-                <span> A Developerr</span>
-              </li>
-              {/* <li>
-                <span>Omkar Sasee</span>
-              </li> */}
-            </ul>
+          <div className={classes["text-box"]}>
+            <span className={classes.staticTxt}>I'm </span>
+            <span className={classes.dynamicTxt} ref={el}></span>
           </div>
           <div className={classes.hireButton}>
             <a target="_blank" href="https://www.linkedin.com/in/omkarsase/">

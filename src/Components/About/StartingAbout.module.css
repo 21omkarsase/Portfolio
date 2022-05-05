@@ -1,6 +1,7 @@
 .about {
     height: 100vh;
     padding: 0 120px;
+    background-color: whitesmoke;
 }
 
 .about h1 {
@@ -43,8 +44,12 @@
 }
 
 
-.main-about .info button:hover{
+.main-about .info button:hover {
     color: crimson;
     background: none;
     font-weight: 600;
+}
+
+.cvButton {
+    margin: 20px 0;
 }

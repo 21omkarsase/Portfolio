@@ -1,18 +1,15 @@
-.projectsList{
+.projectsList {
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     width: 80%;
     margin: 30px auto;
 }
 
-.projectArea h2{
+.projectArea h2 {
     font-size: 50px;
     font-weight: 500;
     margin: 0;
     padding-top: 30px;
     text-align: center;
-}
-.projectArea{
-    background-color: whitesmoke;
 }

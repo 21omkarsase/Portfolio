@@ -1,7 +1,11 @@
+.skillSection {
+    background-color: whitesmoke;
+}
+
 .skills-area {
     width: 80%;
     margin: 0 auto;
-    padding: 200px 0;
+    padding: 150px 0;
 }
 
 .skillsList {
@@ -43,7 +47,8 @@
 }
 
 .certificateList li {
-    list-style: square;    margin-bottom: 7px;
+    list-style: square;
+    margin-bottom: 7px;
 }
 
 .certificateList a {

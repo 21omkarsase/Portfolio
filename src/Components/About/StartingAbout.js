@@ -13,12 +13,8 @@ function StartingAbout() {
         </div>
         <div className={classes.info}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quasi
-            quisquam soluta reprehenderit est quidem ipsum laboriosam nobis,
-            numquam provident, tenetur blanditiis quaerat aspernatur molestias
-            autem! Voluptate aspernatur unde temporibus sunt? Unde quasi nam vel
-            harum corporis quo nulla ducimus adipisci blanditiis, reiciendis at,
-            inventore dolorem perferendis, animi similique architecto.
+            I'am second year computer engineering student, at Pillai College Of
+            Engineering, New Panvel.
           </p>
           <div className={classes.cvButton}>
             <button type="button">Download CV</button>

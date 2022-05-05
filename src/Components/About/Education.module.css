@@ -6,21 +6,25 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: 30px;
+    padding: 150px 0;
 }
 
-h1{
+h1 {
     font-size: 35px;
     font-weight: 600;
 }
+
 h4,
 h3 {
     margin: 0;
     padding: 0;
 }
-.heading{
+
+.heading {
     width: 80%;
     margin: 0 auto;
 }
+
 .graduationYear {
     /* font-size: 20pxrem; */
     color: white;
@@ -44,34 +48,38 @@ h3 {
     margin: 0;
     padding: 0px 2px;
 }
-.clgInfo{
+
+.clgInfo {
     margin-left: 10px;
 }
 
-.info li
-{
+.info li {
     list-style: circle;
 }
-.info ul{
+
+.info ul {
     margin-left: 40px;
 }
 
-.engineering h3,.juniorClg h3{
+.engineering h3,
+.juniorClg h3 {
     margin: 8px 0;
 }
 
-.engineering h4 ,.juniorClg h4{
+.engineering h4,
+.juniorClg h4 {
     margin: 5px 0;
 }
 
-.juniorClg{
+.juniorClg {
     margin: 40px 0;
 }
+
 /* .school{
     margin: 10px 0;
 } */
 
-.hLine{
+.hLine {
     color: yellow;
     background-color: crimson;
     height: 2px;

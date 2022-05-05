@@ -4,8 +4,8 @@ import classes from "./Education.module.css";
 function Education() {
   return (
     <>
-      <h1 className={classes.heading}>Education</h1>
       <div className={classes["education-area"]}>
+        <h1 className={classes.heading}>Education</h1>
         <div className={classes.engineering}>
           <h3 className={classes.course}>B.TECH IN COMPUTER ENGINEERING</h3>
           <hr className={classes.hLine} />
