@@ -36,6 +36,12 @@ function Home() {
             </a>
           </div>
         </div>
+        <div className={classes["image-area"]}>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/219/219983.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,39 +1,23 @@
 .education-area {
     width: 80%;
-    margin: 0 auto;
-    height: 70vh;
+    margin: 250px auto;
+    list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 30px;
-    padding: 150px 0;
+    gap: 20px;
 }
 
-h1 {
-    font-size: 35px;
-    font-weight: 600;
-}
-
-h4,
-h3 {
-    margin: 0;
-    padding: 0;
-}
-
-.heading {
-    width: 80%;
-    margin: 0 auto;
-}
 
 .graduationYear {
-    /* font-size: 20pxrem; */
-    color: white;
-    background: tomato;
-    padding: 5px 8px;
     border-radius: 3px;
     font-weight: bold;
-    /* color: ; */
     display: inline-block;
+    background: #FF4E50;
+    background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);
+    background: linear-gradient(to right, #fa890f, #ecc60b);
+    color: white;
+    padding: 8px 12px;
+    font-size: 20px;
 }
 
 .info {
@@ -42,11 +26,33 @@ h3 {
     margin-top: 10px;
 }
 
-.info hr {
+.education-area ul li {
+    font-size: 20px;
+}
+
+.clgInfo h3 {
+    font-size: 23px;
+}
+
+
+.education-area hr {
     color: rgb(11, 183, 222);
-    background-color: rgb(11, 183, 222);
+    background: #FF4E50;
+    background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);
+    background: linear-gradient(to right, #F9D423, #FF4E50);
     margin: 0;
     padding: 0px 2px;
+}
+
+.education-area ul {
+    margin-left: 0;
+}
+
+.hLine {
+    color: yellow;
+    background-color: crimson;
+    height: 2px;
+    margin: 5px 0;
 }
 
 .clgInfo {
@@ -54,33 +60,5 @@ h3 {
 }
 
 .info li {
-    list-style: circle;
-}
-
-.info ul {
-    margin-left: 40px;
-}
-
-.engineering h3,
-.juniorClg h3 {
-    margin: 8px 0;
-}
-
-.engineering h4,
-.juniorClg h4 {
-    margin: 5px 0;
-}
-
-.juniorClg {
-    margin: 40px 0;
-}
-
-/* .school{
-    margin: 10px 0;
-} */
-
-.hLine {
-    color: yellow;
-    background-color: crimson;
-    height: 2px;
+    list-style: disc;
 }

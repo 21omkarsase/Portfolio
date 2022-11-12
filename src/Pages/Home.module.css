@@ -1,10 +1,9 @@
 .home-area {
-    background: url("https://images.pexels.com/photos/218863/pexels-photo-218863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center/cover no-repeat rgba(4, 4, 4, 0.281);
-    background-blend-mode: darken;
-    /* background-color: whitesmoke; */
-    max-height: 800px;
+    /* max-height: 800px;
     height: 100VH;
-    width: 100%;
+    width: 100%; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%); */
+    /* background-color: ; */
 }
 
 .content {
@@ -12,7 +11,7 @@
     justify-content: space-between;
     width: 80%;
     align-items: center;
-    height: 80%;
+    min-height: 80%;
     margin: 0 auto;
 }
 
@@ -59,16 +58,16 @@
     font-size: 35px;
 }
 
-span {
-    color: white;
-}
 
 .staticTxt {
-    /* color: tomato; */
+    color: rgba(42, 37, 37, 0.653);
 }
 
 .dynamicTxt {
-    color: tomato;
+    color: orangered;
+    letter-spacing: 3px;
+    font-family: 'Bebas Neue';
+    font-weight: bolder;
 }
 
 li {
@@ -98,19 +97,25 @@ li {
 }
 
 .hireButton button {
-    background: crimson;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
-    /* margin-top: 20px; */
     font-weight: 400;
     border-radius: 6px;
     cursor: pointer;
-    border: 2px solid crimson;
+    border: 1px solid green;
+    background: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
 }
 
 .hireButton button:hover {
-    color: white;
-    background: none;
-    font-weight: 600;
+    background: #e44d26;
+    background: -webkit-linear-gradient(to left, #F16529, #E44D26);
+    background: linear-gradient(to left, #F16529, #E44D26);
+}
+
+.image-area img {
+    width: 400px;
+    height: auto;
 }

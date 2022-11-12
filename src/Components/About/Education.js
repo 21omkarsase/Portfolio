@@ -5,29 +5,27 @@ function Education() {
   return (
     <>
       <div className={classes["education-area"]}>
-        <h1 className={classes.heading}>Education</h1>
-        <div className={classes.engineering}>
-          <h3 className={classes.course}>B.TECH IN COMPUTER ENGINEERING</h3>
+        <h1>Education</h1>
+        <div>
+          <h3>B.TECH IN COMPUTER ENGINEERING</h3>
           <hr className={classes.hLine} />
           <h4 className={classes.graduationYear}>2020-Expected(2024)</h4>
           <div className={classes.info}>
             <hr />
             <div className={classes.clgInfo}>
-              <h3 className={classes.clgName}>
-                Pillai College Of Engineering, New Panvel
-              </h3>
+              <h3>Pillai College Of Engineering, New Panvel</h3>
               <ul className={classes.workList}>
-                <li className={classes.cgpa}>CGPA : 9.4</li>
-                <li className={classes.courseWork}>
+                <li>CGPA : 9.4</li>
+                <li>
                   Relevant Coursework: Data Structures, Algorithms, Object
-                  Oriented Programming, DBMS, Open Source
+                  Oriented Programming, Opeating Systems, DBMS, Computer Network
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className={classes.juniorClg}>
-          <h3 className={classes.school}>SENIOR SCHOOL & HIGH SCHOOL</h3>
+        <div>
+          <h3>SENIOR SCHOOL & HIGH SCHOOL</h3>
           <hr className={classes.hLine} />
           <h4 className={classes.graduationYear}>2020</h4>
           <div className={classes.info}>

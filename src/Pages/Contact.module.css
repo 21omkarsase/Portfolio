@@ -9,8 +9,8 @@
     padding-top: 70px;
 }
 
-h1,
-p {
+.contact h1,
+.contact p {
     margin: 0;
     text-align: center;
 }

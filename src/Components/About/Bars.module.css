@@ -1,12 +1,12 @@
-.bars
-{
+.bars {
     /* width: 38%; */
 }
-.info
-{
+
+.info {
     display: flex;
     justify-content: space-between;
 }
+
 .bars .js {
     height: 5px;
     width: 100%;
@@ -17,9 +17,9 @@
 
 .bars .line {
     height: 5px;
-    width: 100%;
     background: lightgrey;
     position: relative;
+    width: 400px;
 }
 
 .bars .line::before {

@@ -1,49 +1,34 @@
 .skillSection {
-    background-color: whitesmoke;
-}
-
-.skills-area {
     width: 80%;
     margin: 0 auto;
-    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
-.skillsList {
+.skills {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    /* flex-direction: column; */
-    width: 80%;
-    justify-content: space-between;
-    /* align-items: center; */
-    margin: 50px auto;
 }
 
-.skillsList .skillSet1 {
+.col {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 150px;
-    width: 35%;
-    min-width: 450px;
+    gap: 20px;
 }
 
-.skillsList .skillSet2 {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 150px;
-    min-width: 450px;
-}
 
-.certificates h4 {
-    font-weight: 600;
-    margin-bottom: 20px;
+
+.certificates ul {
+    margin-left: 0;
+    padding-left: 20px;
 }
 
 .certificateList {
-    width: 90%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .certificateList li {
@@ -51,11 +36,6 @@
     margin-bottom: 7px;
 }
 
-.certificateList a {
-    /* text-decoration: none; */
-    color: rgba(0, 0, 0, 0.717);
-}
+.certificateList a {}
 
-.certificateList a:hover {
-    color: #000;
-}
+.certificateList a:hover {}

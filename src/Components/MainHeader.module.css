@@ -1,114 +1,58 @@
-* {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 nav {
-    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px 0;
 }
 
-.navBurger {
-    position: fixed;
-    top: 10px;
-    margin: 0 5% 0 95%;
-    color: white;
-    cursor: pointer;
+.navbar {
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+
 }
 
-.navBurger .burgerIcon {
-    font-size: 40px;
-    cursor: pointer;
+.nav_links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav_links .icon {
+    text-decoration: none;
+}
+
+.logoTitle {
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav_links div {
+    padding: 5px;
+    border: 2px solid transparent;
+}
+
+.nav_links div:hover {
+    border-bottom: 3px solid tomato;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: black;
-    background: white;
-    padding: 2px 10px;
-}
-
-.navBar {
-    background-color: white;
-    width: 100px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 20px 60px;
-    height: 100vh;
-}
-
-.mainNav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 80vh;
-    margin-top: 20px;
-}
-
-.closeIcon {
-    margin: 0 auto;
-    display: block;
-    font-size: 30px;
-}
-
-.navBar span {
-    display: block;
-    text-align: center;
-}
-
-.home,
-.about,
-.contact,
-.project {
-    background-color: tomato;
-    padding: 15px 30px;
-    border-radius: 6px;
-
-}
-
-.icon {
-    margin: 0 auto;
-    display: block;
-}
-
-li a {
-    list-style: none;
-    color: white;
     text-decoration: none;
 }
 
-/* .navbar {
-    display: flex;
-    height: 60px;
-    align-items: center;
-    width: 70%;
-    margin: 0 auto;
-    justify-content: space-between;
+.links :hover {}
+
+.links span {
+    font-size: 25px;
+    font-weight: 600;
 }
 
-.scrolling {
-    display: block;
-    position: fixed;
-    width: 100%;
-    top: 0;
+.links .icon {
+    font-size: 25px;
 }
-
-.notScrolling {
-    display: none;
-}
-
-.list {
-    display: flex;
-}
-
-.navbar-nav {
-    display: flex; 
-     margin: 0 auto ; 
-}
-
-.list li {
-    margin: 0 20px;
-}
-
-.list li a {
-    list-style: none;
-    color: white;
-    text-decoration: none;
-} */

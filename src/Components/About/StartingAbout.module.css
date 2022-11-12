@@ -1,55 +1,52 @@
 .about {
-    height: 100vh;
-    padding: 0 120px;
-    background-color: whitesmoke;
+    width: 80%;
+    margin: 100px auto 150px;
+    display: flex;
+    gap: 50px;
 }
 
 .about h1 {
-    margin: 0;
-    padding-top: 90px;
-    text-align: center;
-}
-
-.main-about {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.photo img {
-    max-width: 600px;
-    width: 500px;
-    min-width: 200px;
-    height: auto;
-}
-
-.main-about .info {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    min-width: 400px;
+    /* text-align: center; */
+    width: 50%;
     align-self: center;
 }
 
-.main-about .info button {
-    background: crimson;
+.about p {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 23px;
+    text-align: center;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info button {
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
-    /* margin-top: 20px; */
     font-weight: 400;
     border-radius: 6px;
     cursor: pointer;
-    border: 2px solid crimson;
+    background: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
+    /* align-self: flex-end; */
 }
 
 
-.main-about .info button:hover {
-    color: crimson;
+.info button:hover {
     background: none;
     font-weight: 600;
+    background: #e44d26;
+    background: -webkit-linear-gradient(to left, #F16529, #E44D26);
+    background: linear-gradient(to left, #F16529, #E44D26);
 }
 
-.cvButton {
+.info button {
     margin: 20px 0;
 }
