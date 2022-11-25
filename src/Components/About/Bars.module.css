@@ -1,19 +1,13 @@
 .bars {
-    /* width: 38%; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .info {
     display: flex;
     justify-content: space-between;
 }
-
-.bars .js {
-    height: 5px;
-    width: 100%;
-    background: rgb(198, 17, 17);
-    position: relative;
-}
-
 
 .bars .line {
     height: 5px;
@@ -28,7 +22,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    background: crimson;
+    background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
 }
 
 .bars .html::before {
@@ -36,21 +30,53 @@
 }
 
 .bars .css::before {
-    width: 70%;
+    width: 100%;
 }
 
 .bars .js::before {
-    width: 75%;
+    width: 100%;
 }
 
 .bars .react::before {
-    width: 90%;
+    width: 100%;
 }
 
 .bars .bootstrap::before {
     width: 100%;
 }
 
-.bars .nodejs::before {
-    width: 5%;
+.bars .node::before {
+    width: 80%;
+}
+
+.bars .express::before {
+    width: 80%;
+}
+
+.bars .mongodb::before {
+    width: 100%;
+}
+
+.bars .cpp::before {
+    width: 100%;
+}
+
+.bars .python::before {
+    width: 80%;
+}
+
+.bars .ml::before {
+    width: 70%;
+}
+
+.bars .dl::before {
+    width: 50%;
+}
+
+.bars .ds::before {
+    width: 80%;
+}
+
+.bars .algo::before {
+    width: 80%;
 }

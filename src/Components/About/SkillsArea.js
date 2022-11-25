@@ -14,17 +14,17 @@ function SkillsArea() {
             <Bars label="Javascript" skill="js" percentage="75%" />
             <Bars label="React" skill="react" percentage="90%" />
             <Bars label="Bootstrap" skill="bootstrap" percentage="100%" />
-            <Bars label="Node" skill="nodejs" percentage="100%" />
+            <Bars label="Node" skill="node" percentage="100%" />
             <Bars label="Express" skill="express" percentage="100%" />
           </div>
           <div className={classes.col}>
-            <Bars label="Mongodb" skill="nodejs" percentage="0%" />
-            <Bars label="CPP" skill="cpp" percentage="0%" />
-            <Bars label="Python" skill="python" percentage="0%" />
-            <Bars label="Machine Learning" skill="ml" percentage="0%" />
+            <Bars label="Mongodb" skill="mongodb" percentage="80%" />
+            <Bars label="CPP" skill="cpp" percentage="90%" />
+            <Bars label="Python" skill="python" percentage="80%" />
+            <Bars label="Machine Learning" skill="ml" percentage="50%" />
             <Bars label="Deep Learning" skill="dl" percentage="0%" />
-            <Bars label="Data Structures" skill="dl" percentage="0%" />
-            <Bars label="Algorithms" skill="dl" percentage="0%" />
+            <Bars label="Data Structures" skill="ds" percentage="0%" />
+            <Bars label="Algorithms" skill="algo" percentage="0%" />
           </div>
         </div>
       </div>
@@ -34,14 +34,18 @@ function SkillsArea() {
         <div className={classes.certificates}>
           <ul className={classes.certificateList}>
             <a
-              href="https://drive.google.com/file/d/1J7GlYKm_goj4CW9iltAxhyEXTcGsKfxT/view?usp=sharing"
+              href="https://ude.my/UC-a07bf607-54ca-47f5-918d-4d7e3a507f65"
               target="_blank"
             >
               <li>
-                React - The Complete Guide (incl Hooks, React Router,
-                Redux)React - The Complete Guide (incl Hooks, React Router,
-                Redux)
+                React - The Complete Guide (incl Hooks, React Router, Redux)
               </li>
+            </a>
+            <a
+              href="https://ude.my/UC-bad714df-90ea-437f-932a-821eec33195d/"
+              target="_blank"
+            >
+              <li>Udemy The Complete Node.js Developer Course</li>
             </a>
             <a
               href="https://www.coursera.org/account/accomplishments/certificate/84UQ897DGA8P"

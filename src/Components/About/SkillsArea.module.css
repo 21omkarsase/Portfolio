@@ -34,8 +34,5 @@
 .certificateList li {
     list-style: square;
     margin-bottom: 7px;
+    color: black;
 }
-
-.certificateList a {}
-
-.certificateList a:hover {}
