@@ -1,0 +1,15 @@
+.projectsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+.projectArea h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 30px;
+    text-align: center;
+}
