@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 const errorMiddleware = require("./utils/error");
 
-require("dotenv").config({ path: "backend/config/config.env" });
+require("dotenv").config({ path: "config/config.env" });
 
 app.use(express.json());
 app.use(bodyParser.json());

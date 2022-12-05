@@ -17,6 +17,7 @@ function ProjectDetail() {
 
   useEffect(() => {
     const fetchProject = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
           `/api/v1/singleProject/${params.projectId}`
@@ -37,17 +38,17 @@ function ProjectDetail() {
       } catch (error) {
         setError(true);
       }
+      setLoading(false);
     };
-    setLoading(true);
+
     fetchProject();
-    setLoading(false);
     if (project !== undefined) setError(false);
   }, []);
 
   return (
     <>
-      {loading && !error && <Loader />}
-      {project !== undefined && !loading && !error && (
+      {loading && <Loader />}
+      {project && !loading && (
         <div className={classes.projectDetailArea}>
           <div className={classes["main-img"]}>
             <img className={classes["img-fluid"]} src={imgUrl} alt="#" />
@@ -107,7 +108,7 @@ function ProjectDetail() {
           </div>
         </div>
       )}
-      {error && !loading && project === undefined && <Error />}
+      {error && <Error />}
     </>
   );
 }

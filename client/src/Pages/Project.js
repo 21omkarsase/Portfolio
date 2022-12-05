@@ -12,6 +12,7 @@ function Project() {
 
   useEffect(() => {
     const fetchProjects = async () => {
+      setLoading(true);
       try {
         const response = await axios.get("/api/v1/allprojects");
         if (response.data) {
@@ -30,17 +31,16 @@ function Project() {
       } catch (error) {
         setError(true);
       }
+      setLoading(false);
     };
-    setLoading(true);
     fetchProjects();
-    setLoading(false);
     if (projects.length > 0) setError(false);
   }, []);
   return (
     <div className={classes.projectArea}>
       <h2>Projects</h2>
       <div className={classes.projectsList}>
-        {/* {<Loader />} */}
+        {loading && <Loader />}
         {projects &&
           projects.map((project) => (
             <ProjectItem
@@ -55,7 +55,7 @@ function Project() {
               image={project.image}
             />
           ))}
-        {/* {<Error error="No Projects Found" />} */}
+        {error && <Error error="No Projects Found" />}
       </div>
     </div>
   );

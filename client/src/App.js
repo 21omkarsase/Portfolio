@@ -1,6 +1,5 @@
 import MainHeader from "./Components/MainHeader";
-import Footer from "./Components/Footer";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Project from "./Pages/Project";
