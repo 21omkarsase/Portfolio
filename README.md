@@ -1,3 +1,1 @@
-# In Progress
-
 # Portfolio Website

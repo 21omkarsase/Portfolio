@@ -62,3 +62,10 @@
 .info li {
     list-style: disc;
 }
+
+@media screen and (max-width:550px) {
+    .education-area {
+        margin: 250px 20px;
+        width: 95%;
+    }
+}

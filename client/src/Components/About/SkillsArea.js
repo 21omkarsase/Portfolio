@@ -9,22 +9,22 @@ function SkillsArea() {
         <h1>Skills</h1>
         <div className={classes.skills}>
           <div className={classes.col}>
-            <Bars label="HTML" skill="html" percentage="100%" />
-            <Bars label="CSS" skill="css" percentage="70%" />
-            <Bars label="Javascript" skill="js" percentage="75%" />
-            <Bars label="React" skill="react" percentage="90%" />
-            <Bars label="Bootstrap" skill="bootstrap" percentage="100%" />
-            <Bars label="Node" skill="node" percentage="100%" />
-            <Bars label="Express" skill="express" percentage="100%" />
+            <Bars label="HTML" skill="html" percentage="90%" />
+            <Bars label="CSS" skill="css" percentage="90%" />
+            <Bars label="Javascript" skill="js" percentage="80%" />
+            <Bars label="React" skill="react" percentage="80%" />
+            <Bars label="Bootstrap" skill="bootstrap" percentage="90%" />
+            <Bars label="Node" skill="node" percentage="80%" />
+            <Bars label="Express" skill="express" percentage="80%" />
           </div>
           <div className={classes.col}>
             <Bars label="Mongodb" skill="mongodb" percentage="80%" />
             <Bars label="CPP" skill="cpp" percentage="90%" />
-            <Bars label="Python" skill="python" percentage="80%" />
+            <Bars label="Python" skill="python" percentage="90%" />
             <Bars label="Machine Learning" skill="ml" percentage="50%" />
-            <Bars label="Deep Learning" skill="dl" percentage="0%" />
-            <Bars label="Data Structures" skill="ds" percentage="0%" />
-            <Bars label="Algorithms" skill="algo" percentage="0%" />
+            <Bars label="Deep Learning" skill="dl" percentage="50%" />
+            <Bars label="Data Structures" skill="ds" percentage="70%" />
+            <Bars label="Algorithms" skill="algo" percentage="50%" />
           </div>
         </div>
       </div>

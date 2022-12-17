@@ -160,7 +160,7 @@
 .emailArea h4,
 .emailArea a {
     margin: 10px 0 20px 0;
-    color: #bc2a8d;
+    /* color: bl ; */
 }
 
 .labelTag {
@@ -170,4 +170,44 @@
 
 .icon {
     color: crimson;
+}
+
+@media screen and (max-width:700px) {
+    .firstRow {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .contactForm input,
+    .contactForm textarea {
+        width: 70%;
+    }
+
+    .firstRow .nameDiv,
+    .firstRow .emailDiv {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .contactForm {
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .contactForm input,
+    .contactForm textarea {
+        width: 100%;
+    }
+
+    .contactForm {
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width:385px) {
+    .contactArea {
+        width: 95%;
+    }
 }

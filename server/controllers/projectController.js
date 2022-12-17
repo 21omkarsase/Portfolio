@@ -43,8 +43,6 @@ exports.uploadProject = catchAsyncErrors(async (req, res, next) => {
         })
       )
       .catch((err) => {
-        console.log("****************started*********");
-        console.log(err);
         res
           .status(400)
           .send({ success: false, message: "Project upload failed" });

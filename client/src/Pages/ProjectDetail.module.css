@@ -2,8 +2,6 @@
     display: flex;
     width: 90%;
     margin: 0 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     height: 100vh;
     align-items: center;
@@ -89,4 +87,48 @@ ul {
 .projLinks .links .icon {
     font-size: 30px;
     cursor: pointer;
+}
+
+@media screen and (max-width:1270px) {
+    .projectDetailArea {
+        flex-direction: column;
+    }
+
+    .main-img {
+        margin-top: 50px;
+    }
+
+    .projectDetail {
+        margin-top: -160px;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    .main-img {
+        /* width: 200px; */
+        min-width: 400px;
+    }
+
+    .projectDetail {
+        margin-top: -80px;
+    }
+}
+
+@media screen and (max-width:530px) {
+
+    .projectDetail {
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width:415px) {
+
+    .projectDetail {
+        min-width: 250px;
+    }
+
+    .main-img {
+        min-width: 300px;
+    }
 }

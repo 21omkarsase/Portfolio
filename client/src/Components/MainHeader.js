@@ -1,22 +1,39 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "./MainHeader.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, fahome } from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { faDiagramProject } from "@fortawesome/free-solid-svg-icons";
 import { faContactBook } from "@fortawesome/free-solid-svg-icons";
-import { faNavicon } from "@fortawesome/free-solid-svg-icons";
-import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const MainHeader = () => {
+  const [navStatus, setNavStatus] = useState(false);
+  const navRef = useRef();
+  const navbarHandler = () => {
+    setNavStatus((navStatus) => !navStatus);
+  };
   return (
-    <nav>
-      <div className={classes.navbar}>
-        <div className={classes.logo}>
-          <p className={classes.logoTitle}>Omkar Sase</p>
+    <header>
+      <nav>
+        <div className={classes.navbar}>
+          <Link className={classes.links} to="/">
+            <div className={classes.logo}>
+              <p className={classes.logoTitle}>Omkar Sase</p>
+            </div>
+          </Link>
+
+          <div onClick={navbarHandler} className={classes.bars}>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
         </div>
-        <div className={classes.nav_links}>
+        <div
+          ref={navRef}
+          className={`${navStatus ? classes.navOpen : classes.navClose} ${
+            classes.nav_links
+          }`}
+        >
           <div className={classes.home}>
             <Link className={classes.links} to="/">
               <FontAwesomeIcon icon={faHome} className={classes.icon} />
@@ -45,8 +62,8 @@ const MainHeader = () => {
             </Link>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>{" "}
+    </header>
   );
 };
 

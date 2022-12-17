@@ -1,48 +1,23 @@
 import React, { useEffect, useState } from "react";
 import classes from "./ProjectDetail.module.css";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import Loader from "../Components/Layout/Loader";
 import Error from "../Components/Layout/Error";
-import axios from "axios";
+import { fetchProject } from "../store/actions";
 
 function ProjectDetail() {
-  const [project, setProject] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [imgUrl, setImgUrl] = useState("");
+  const dispatch = useDispatch();
+  const { project, imgUrl, loading, error } = useSelector(
+    (state) => state.project
+  );
   const params = useParams();
 
   useEffect(() => {
-    const fetchProject = async () => {
-      setLoading(true);
-      try {
-        const response = await axios.get(
-          `/api/v1/singleProject/${params.projectId}`
-        );
-        if (response.data && response.data.success === false) {
-          throw new Error(response.data.message);
-        } else {
-          setProject(response.data.project);
-
-          const base64String = btoa(
-            new Uint8Array(response.data.project.image.data.data).reduce(
-              (data, byte) => data + String.fromCharCode(byte),
-              ""
-            )
-          );
-          setImgUrl(`data:image/png;base64,${base64String}`);
-        }
-      } catch (error) {
-        setError(true);
-      }
-      setLoading(false);
-    };
-
-    fetchProject();
-    if (project !== undefined) setError(false);
+    dispatch(fetchProject(params.projectId));
   }, []);
 
   return (
@@ -58,10 +33,6 @@ function ProjectDetail() {
               <h1>{project.name}</h1>
               <hr />
               <div className={classes.info}>
-                <h4>
-                  <span>category : </span>
-                  {project.date}
-                </h4>
                 <h4>
                   <span>category : </span>
                   {project.category}
@@ -108,7 +79,7 @@ function ProjectDetail() {
           </div>
         </div>
       )}
-      {error && <Error />}
+      {error && <Error error={error} />}
     </>
   );
 }

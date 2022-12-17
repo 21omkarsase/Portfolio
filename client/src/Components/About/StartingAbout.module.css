@@ -6,7 +6,8 @@
 }
 
 .about h1 {
-    /* text-align: center; */
+    display: flex;
+    gap: 5px;
     width: 50%;
     align-self: center;
 }
@@ -16,6 +17,8 @@
     font-weight: 500;
     font-size: 23px;
     text-align: center;
+    display: flex;
+    justify-content: flex-start;
 }
 
 
@@ -49,4 +52,18 @@
 
 .info button {
     margin: 20px 0;
+}
+
+@media screen and (max-width:1161px) {
+    .about {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .about {
+        flex-direction: column;
+        gap: 0;
+    }
 }

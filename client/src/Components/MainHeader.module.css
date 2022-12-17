@@ -1,10 +1,17 @@
-nav {
+header {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 20px 0;
+    display: flex;
+}
+
+nav {
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
 }
 
 .navbar {
-    width: 80%;
     justify-content: space-between;
     margin: 0 auto;
     display: flex;
@@ -55,4 +62,69 @@ nav {
 
 .links .icon {
     font-size: 25px;
+}
+
+.bars {
+    display: none;
+    font-size: 39px;
+    cursor: pointer;
+}
+
+.navOpen {
+    display: flex;
+    flex-direction: column;
+}
+
+.navClose {
+    display: flex;
+}
+
+@media screen and (max-width:952px) {
+    nav {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .bars {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar {
+        width: 90%;
+    }
+
+
+    .navOpen {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navClose {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+}
+
+@media screen and (min-width:801px) {
+    .bars {
+        display: none;
+    }
+
+    .navbar {
+        width: 80%;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        display: flex;
+    }
 }

@@ -22,3 +22,21 @@
     text-decoration: none;
     color: black;
 }
+
+@media screen and (max-width:450px) {
+    .ProjectCard {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .ProjectCard {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:334px) {
+    .ProjectCard {
+        padding: 20px;
+    }
+}

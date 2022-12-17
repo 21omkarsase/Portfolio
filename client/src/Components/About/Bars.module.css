@@ -26,23 +26,23 @@
 }
 
 .bars .html::before {
-    width: 100%;
+    width: 90%;
 }
 
 .bars .css::before {
-    width: 100%;
+    width: 90%;
 }
 
 .bars .js::before {
-    width: 100%;
+    width: 80%;
 }
 
 .bars .react::before {
-    width: 100%;
+    width: 80%;
 }
 
 .bars .bootstrap::before {
-    width: 100%;
+    width: 90%;
 }
 
 .bars .node::before {
@@ -54,19 +54,19 @@
 }
 
 .bars .mongodb::before {
-    width: 100%;
-}
-
-.bars .cpp::before {
-    width: 100%;
-}
-
-.bars .python::before {
     width: 80%;
 }
 
+.bars .cpp::before {
+    width: 90%;
+}
+
+.bars .python::before {
+    width: 90%;
+}
+
 .bars .ml::before {
-    width: 70%;
+    width: 50%;
 }
 
 .bars .dl::before {
@@ -74,9 +74,18 @@
 }
 
 .bars .ds::before {
-    width: 80%;
+    width: 70%;
 }
 
 .bars .algo::before {
-    width: 80%;
+    width: 50%;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .bars .line {
+        width: 300px;
+    }
+
 }
