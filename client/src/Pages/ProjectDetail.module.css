@@ -89,6 +89,26 @@ ul {
     cursor: pointer;
 }
 
+
+li {
+    list-style: disc;
+}
+
+.category,
+.tech,
+.text {
+    font-weight: 500;
+}
+
+.tech_names {
+    text-transform: uppercase;
+}
+
+.bottomArea ul li {
+    padding-bottom: 7px;
+    letter-spacing: 1px;
+}
+
 @media screen and (max-width:1270px) {
     .projectDetailArea {
         flex-direction: column;

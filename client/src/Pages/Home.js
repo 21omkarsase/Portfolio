@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import classes from "../Pages/Home.module.css";
 import Typed from "typed.js";
 import MetaData from "../Components/Layout/MetaData";
-import icon from "../Images/icon.png";
+import photo from "../Images/photo.jpg";
 
 function Home() {
   const el = useRef(null);
@@ -41,7 +41,7 @@ function Home() {
             </div>
           </div>
           <div className={classes["image-area"]}>
-            <img src={icon} alt="" />
+            <img src={photo} alt="" />
           </div>
         </div>
       </div>

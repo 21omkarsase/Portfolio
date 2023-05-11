@@ -2,8 +2,8 @@
     /* max-height: 800px;
     height: 100VH;
     width: 100%; */
-    /* clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%); */
-    /* background-color: ; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+    background-color: rgb(52, 100, 195); */
 }
 
 .content {
@@ -116,8 +116,9 @@ li {
 }
 
 .image-area img {
-    width: 400px;
+    width: 500px;
     height: auto;
+    border-radius: 50%;
 }
 
 @media screen and (max-width:1200px) {

@@ -34,6 +34,14 @@ function SkillsArea() {
         <div className={classes.certificates}>
           <ul className={classes.certificateList}>
             <a
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1SbqgLCzWYjRkf_n_ljRlPlkkXMNf1Y2q/view"
+              target="_blank"
+            >
+              <li>Deep Blue Hackathon Finalist Certificate </li>
+            </a>
+            <a
+              rel="noopener noreferrer"
               href="https://ude.my/UC-a07bf607-54ca-47f5-918d-4d7e3a507f65"
               target="_blank"
             >
@@ -42,24 +50,28 @@ function SkillsArea() {
               </li>
             </a>
             <a
+              rel="noopener noreferrer"
               href="https://ude.my/UC-bad714df-90ea-437f-932a-821eec33195d/"
               target="_blank"
             >
               <li>Udemy The Complete Node.js Developer Course</li>
             </a>
             <a
+              rel="noopener noreferrer"
               href="https://www.coursera.org/account/accomplishments/certificate/84UQ897DGA8P"
               target="_blank"
             >
               <li>Front-End Web UI Frameworks and Tools: Bootstrap 4</li>
             </a>
             <a
+              rel="noopener noreferrer"
               href="https://drive.google.com/file/d/1xj3hkPAXP76RRduZ6tm4PSRmFb53n1v5/view?usp=sharing"
               target="_blank"
             >
               <li>Python Course Certificate</li>
             </a>
             <a
+              rel="noopener noreferrer"
               href="https://drive.google.com/file/d/15awTfrg5OiM6NfTR_SqlRAcClw2EfnbX/view?usp=sharing"
               target="_blank"
             >

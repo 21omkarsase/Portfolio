@@ -72,15 +72,17 @@ function ProjectDetail() {
               <hr />
               <div className={classes.info}>
                 <h4>
-                  <span>category : </span>
+                  <span className={classes.category}>Category : </span>
                   {project.category}
                 </h4>
                 <h4>
-                  <span>Tech : </span>
-                  {project.tech}
+                  <span className={classes.tech}>Tech : </span>
+                  <span className={classes.tech_names}>
+                    {project.tech}
+                  </span>
                 </h4>
                 <div className={classes.projLinks}>
-                  <span className={classes.text}>Links </span>
+                  <span className={classes.text}>Links : </span>
                   <div className={classes.links}>
                     <span>
                       <a
