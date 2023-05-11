@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 config
+
+server/config
+server/config/
