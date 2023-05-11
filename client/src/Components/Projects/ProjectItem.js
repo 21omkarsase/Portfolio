@@ -3,13 +3,7 @@ import { Link } from "react-router-dom";
 import classes from "./ProjectItem.module.css";
 
 function ProjectItem(props) {
-  const base64String = btoa(
-    new Uint8Array(props.image.data.data).reduce(
-      (data, byte) => data + String.fromCharCode(byte),
-      ""
-    )
-  );
-  const url = `data:image/png;base64,${base64String}`;
+
   return (
     <div className={classes.card}>
       <Link to={`/projects/${props.id}`}>
@@ -17,8 +11,8 @@ function ProjectItem(props) {
           <div className={classes.image}>
             <img
               className={`${classes.img}${" "}${classes["img-fluid"]}`}
-              src={url}
-              alt="Project Image"
+              src={props.imgage}
+              alt={props.name || "Project"}
             />
           </div>
           <div className={classes.content}>

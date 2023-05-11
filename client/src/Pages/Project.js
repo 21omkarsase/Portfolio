@@ -7,6 +7,19 @@ import Error from "../Components/Layout/Error";
 import MetaData from "../Components/Layout/MetaData";
 import { fetchProjects } from "../store/actions";
 
+import chatapp from "../Images/chatapp.png"
+import dsa from "../Images/dsa.png"
+import portfolio from "../Images/portfolio.png"
+import stm from "../Images/stm.png"
+import task_manager from "../Images/taskmanager.png"
+import weather_app from "../Images/weatherapp.png"
+import expense_tracker from "../Images/expensetracker.png"
+import cf_analyzer from "../Images/visualizer.PNG"
+
+const projectsImages = [
+  stm, portfolio, cf_analyzer, task_manager, chatapp, weather_app, expense_tracker, dsa
+]
+
 function Project() {
   const dispatch = useDispatch();
   const { projectsList, loading, error } = useSelector(
@@ -25,7 +38,7 @@ function Project() {
         <div className={classes.projectsList}>
           {!projectsList && loading && <Loader />}
           {projectsList &&
-            projectsList.map((project) => (
+            projectsList.map((project, idx) => (
               <ProjectItem
                 key={project._id}
                 id={project._id}
@@ -35,7 +48,7 @@ function Project() {
                 title={project.title}
                 tech={project.tech}
                 desc={project.desc}
-                image={project.image}
+                imgage={projectsImages[idx]}
               />
             ))}
           {error && <Error error="No Projects Found" />}

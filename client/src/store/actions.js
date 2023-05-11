@@ -13,7 +13,7 @@ import {
 export const fetchProjects = () => async (dispatch) => {
   try {
     dispatch({ type: PROJECTS_REQUEST_STARTED });
-    const response = await axios.get("/api/v1/allprojects");
+    const response = await axios.get("http://127.0.0.1:5000/api/v1/allprojects");
     if (response.data) {
       if (response.data.success) {
         const proj = [];
@@ -43,40 +43,41 @@ export const fetchProjects = () => async (dispatch) => {
   }
 };
 
-export const fetchProject = (id) => async (dispatch) => {
+export const fetchProject = (id, callback) => async (dispatch) => {
   try {
     dispatch({ type: PROJECT_REQUEST_STARTED });
-    const response = await axios.get(`/api/v1/singleProject/${id}`);
+    const response = await axios.get(`http://127.0.0.1:5000/api/v1/singleProject/${id}`);
     if (response.data) {
       if (response.data.success) {
-        const base64String = btoa(
-          new Uint8Array(response.data.project.image.data.data).reduce(
-            (data, byte) => data + String.fromCharCode(byte),
-            ""
-          )
-        );
         dispatch({
           type: PROJECT_REQUEST_SUCCESS,
           payload: {
             project: response.data.project,
-            imgUrl: `data:image/png;base64,${base64String}`,
           },
         });
+        callback(true, response.data.project);
       }
     } else {
-      throw new Error(response.data.message);
+      dispatch({
+        type: PROJECT_REQUEST_FAILED,
+        payload: response.data.message,
+      });
+      callback(false, response.data.message);
     }
   } catch (error) {
-    if (error.response)
+    if (error.response) {
       dispatch({
         type: PROJECT_REQUEST_FAILED,
         payload: error.response.data,
       });
+      callback(false, error.response.data)
+    }
     else if (error.request) {
       dispatch({
         type: PROJECT_REQUEST_FAILED,
         payload: "Check your internet connection and try again ",
       });
+      callback(false, " Check your internet connection and try again");
     }
   }
 };

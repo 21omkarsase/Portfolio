@@ -9,15 +9,53 @@ import Loader from "../Components/Layout/Loader";
 import Error from "../Components/Layout/Error";
 import { fetchProject } from "../store/actions";
 
+
+import chatapp from "../Images/chatapp.png"
+import dsa from "../Images/dsa.png"
+import portfolio from "../Images/portfolio.png"
+import stm from "../Images/stm.png"
+import task_manager from "../Images/taskmanager.png"
+import weather_app from "../Images/weatherapp.png"
+import expense_tracker from "../Images/expensetracker.png"
+import cf_analyzer from "../Images/visualizer.PNG"
+
+const projectsImages = [
+  stm, portfolio, cf_analyzer, task_manager, chatapp, weather_app, expense_tracker, dsa
+]
+
 function ProjectDetail() {
+  const [imgUrl, setImgUrl] = useState("");
+  // const [project, setProject] = useState([]);
+  const [error, setError] = useState(null);
   const dispatch = useDispatch();
-  const { project, imgUrl, loading, error } = useSelector(
+  const { project, loading } = useSelector(
     (state) => state.project
   );
   const params = useParams();
 
   useEffect(() => {
-    dispatch(fetchProject(params.projectId));
+    dispatch(fetchProject(params.projectId, (status, response) => {
+      if (status) {
+        if (response.name === "Meetings Summarization") {
+          setImgUrl(projectsImages[0]);
+        }
+        else if (response.name === "Portfolio")
+          setImgUrl(projectsImages[1]);
+        else if (response.name === "Codeforces-Analyzer")
+          setImgUrl(projectsImages[2]);
+        else if (response.name === "Task Manager")
+          setImgUrl(projectsImages[3]);
+        else if (response.name === "Chat App")
+          setImgUrl(projectsImages[4]);
+        else if (response.name === "Weather App")
+          setImgUrl(projectsImages[5]);
+        else if (response.name === "Expense Tracker")
+          setImgUrl(projectsImages[6]);
+        else setImgUrl(projectsImages[7]);
+      } else {
+        setError(response)
+      }
+    }));
   }, []);
 
   return (
@@ -74,12 +112,16 @@ function ProjectDetail() {
             </div>
             <div className={classes.bottomArea}>
               <h2>Details</h2>
-              {project.desc}
+              <ul>
+                {project.desc.map((desc, idx) => (
+                  <li key={idx}>{desc}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       )}
-      {error && <Error error={error} />}
+      {error && !loading && <Error error={error} />}
     </>
   );
 }

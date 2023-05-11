@@ -1,25 +1,9 @@
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../utils/catchAsyncErrors");
 const Project = require("../models/projectModel");
-const multer = require("multer");
-const fs = require("fs");
-const Storage = multer.diskStorage({
-  destination: "uploads",
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
-  },
-});
 
-const upload = multer({
-  storage: Storage,
-}).single("projectImage");
-
-exports.uploadProject = catchAsyncErrors(async (req, res, next) => {
-  upload(req, res, (err) => {
-    if (err) {
-      return next(new ErrorHandler("upload project failed"));
-    }
-
+exports.uploadProject = async (req, res, next) => {
+  try {
     const project = new Project({
       name: req.body.name,
       title: req.body.title,
@@ -28,27 +12,21 @@ exports.uploadProject = catchAsyncErrors(async (req, res, next) => {
       tech: req.body.tech,
       desc: req.body.desc,
       category: req.body.category,
-      image: {
-        data: fs.readFileSync("uploads/" + req.file.filename),
-        contentType: "image/png",
-      },
     });
-    project
-      .save()
-      .then(() =>
-        res.status(200).send({
-          success: true,
-          message: "Project uploaded successfully",
-          project,
-        })
-      )
-      .catch((err) => {
-        res
-          .status(400)
-          .send({ success: false, message: "Project upload failed" });
-      });
-  });
-});
+
+    await project.save();
+    res.status(200).send({
+      success: true,
+      message: "Project uploaded successfully",
+      project,
+    })
+
+  } catch (error) {
+    res
+      .status(400)
+      .send({ success: false, message: "Project upload failed" });
+  }
+};
 
 exports.getAllProjects = catchAsyncErrors(async (req, res, next) => {
   const projects = await Project.find({});

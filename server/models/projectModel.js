@@ -21,16 +21,15 @@ const projectsModel = new mongoose.Schema({
     type: String,
     required: true,
   },
-  desc: {
-    type: String,
-    required: true,
-  },
+  desc: [
+    {
+      type: String,
+      required: true,
+    }
+  ],
   category: {
     type: String,
     required: true,
-  },
-  image: {
-    data: Buffer,
   },
 });
 
