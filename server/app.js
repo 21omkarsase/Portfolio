@@ -5,7 +5,7 @@ const fs = require("fs");
 const errorMiddleware = require("./utils/error");
 const cors = require("cors");
 
-require("dotenv").config({ path: "config/config.env" });
+require("dotenv").config({ path: "config/.env" });
 
 app.use(express.json());
 app.use(cors());
